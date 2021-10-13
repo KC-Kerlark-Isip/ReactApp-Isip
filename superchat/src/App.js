@@ -1,32 +1,20 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
+import configData from "./firebase-config.json";
 
-// import firebase from 'firebase/compat/app';
-// import 'firebase/firestore';
-// import 'firebase/auth';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import 'firebase/compat/analytics';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+import 'firebase/auth';
+import 'firebase/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
-//import { initializeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
 
-firebase.initializeApp({
-  apiKey: "AIzaSyDnZxDEDoimBT47ctnqLQrfyvh08vKZDFg",
-  authDomain: "reactapp-isip.firebaseapp.com",
-  projectId: "reactapp-isip",
-  storageBucket: "reactapp-isip.appspot.com",
-  messagingSenderId: "416660337099",
-  appId: "1:416660337099:web:cd27c05a31a84422a4064e",
-  measurementId: "G-4M3MJ130G4"
-})
+firebase.initializeApp(configData);
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-//const analytics = firebase.analytics();
+const analytics = firebase.analytics();
 
 
 function App() {
@@ -124,7 +112,7 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png' }alt = "hello"  />
+      <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
       <p>{text}</p>
     </div>
   </>)

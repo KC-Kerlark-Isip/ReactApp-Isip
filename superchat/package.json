@@ -3,16 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "firebase": "^7.20.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-firebase-hooks": "^2.2.0",
-    "react-scripts": "3.4.3"
-=======
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -22,7 +12,6 @@
     "react-firebase-hooks": "^3.0.4",
     "react-scripts": "^0.9.5",
     "web-vitals": "^1.1.2"
->>>>>>> 6d29ba168ad84109065d5b197898127410d31379
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,12 +35,6 @@
       "last 1 safari version"
     ]
   },
-<<<<<<< HEAD
-    "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-plugin-react": "^7.26.1"
-  }  
-=======
   "devDependencies": {
     "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -60,5 +43,4 @@
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0"
   }
->>>>>>> 6d29ba168ad84109065d5b197898127410d31379
 }

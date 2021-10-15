@@ -44,10 +44,8 @@ function SignIn() {
   }
 
   return (
-    <>
-      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
+      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>,
       <p>Do not violate the community guidelines or you will be banned for life!</p>
-    </>
   )
 
 }
@@ -86,21 +84,19 @@ function ChatRoom() {
   }
 
   return (<>
-    <main>
+  <main>
 
       {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
 
       <span ref={dummy}></span>
 
-    </main>
+    </main><form onSubmit={sendMessage}>
 
-    <form onSubmit={sendMessage}>
+        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
 
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+        <button type="submit" disabled={!formValue}>🕊️</button>
 
-      <button type="submit" disabled={!formValue}>🕊️</button>
-
-    </form>
+      </form>
   </>)
 }
 

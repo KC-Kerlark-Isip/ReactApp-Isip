@@ -84,19 +84,21 @@ function ChatRoom() {
   }
 
   return (<>
-  <main>
+    <main>
 
       {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
 
       <span ref={dummy}></span>
 
-    </main><form onSubmit={sendMessage}>
+    </main>
 
-        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+    <form onSubmit={sendMessage}>
 
-        <button type="submit" disabled={!formValue}>🕊️</button>
+      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
 
-      </form>
+      <button type="submit" disabled={!formValue}>🕊️</button>
+
+    </form>
   </>)
 }
 

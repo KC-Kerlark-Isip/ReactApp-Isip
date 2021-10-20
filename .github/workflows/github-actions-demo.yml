@@ -15,7 +15,8 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Install ESLint
-        run: npm i
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
       - name: Run ESLint
-        run: npm run lint
+        run: eslint . --ext .js,.jsx,.ts,.tsx

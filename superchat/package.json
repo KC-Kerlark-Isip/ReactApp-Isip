@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "node .node/node_modules/eslint/bin/eslint . --ignore-path .gitignore",
+    "lint": "eslint .",
     "eslint:github-action": "node ./node_modules/eslint/bin/eslint . --ignore-path . gitignore -- max-warnings 0"
   },
   "eslintConfig": {
